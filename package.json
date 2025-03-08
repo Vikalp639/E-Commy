@@ -4,8 +4,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
+   "server": "nodemon backend/server.js",
+		"start": "node backend/server.js",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
