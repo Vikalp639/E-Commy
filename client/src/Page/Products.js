@@ -11,7 +11,7 @@ const Products=()=>{
     const[products,setProducts]=useState([]);
     
 const getproducts=async()=>{
-    const {data}=await axios.get(`${process.env.REACT_APP_API}/api/v1/getproducts`);
+    const {data}=await axios.get(`http://localhost:8000/api/v1/getproducts`);
      setProducts(data.products);
    
   }
@@ -34,7 +34,7 @@ const getproducts=async()=>{
                     
                     
                   }} >
-<img className='w-[200px] h-[200px] rounded-[5%]' src={`${process.env.REACT_APP_API}/api/v1/getphoto/${p._id}`} alt='photoff'></img>
+<img className='w-[200px] h-[200px] rounded-[5%]' src={`http://localhost:8000/api/v1/getphoto/${p._id}`} alt='photoff'></img>
 <div  >{p.name}
                         
                         </div>

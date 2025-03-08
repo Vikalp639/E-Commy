@@ -18,7 +18,7 @@ const Login = () => {
     async function handle(e) {
         e.preventDefault();
         try {
-            const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/login`, { email,password });
+            const res = await axios.post(`http://localhost:8000/api/v1/login`, { email,password });
             if (res.data.success) {
                 toast.success(res.data.message);
                 console.log(res.data.success);

@@ -17,7 +17,7 @@ const  Createproduct=()=> {
   const [categories,Setcategories]=useState([]);
   const [sel,setsel]=useState("");
   const getcategory=async()=>{
-    const aa=await axios.get(`${process.env.REACT_APP_API}/api/v1/getcategory`);
+    const aa=await axios.get(`http://localhost:8000/api/v1/getcategory`);
      Setcategories(aa.data.category);
    
   }
@@ -36,7 +36,7 @@ const  Createproduct=()=> {
      productData.append("category",sel);
     //  productData.append("shipping",shipping);
       const { data } = await axios.post(
-       `${process.env.REACT_APP_API}/api/v1/createproduct`,
+       `http://localhost:8000/api/v1/createproduct`,
         productData
       );
       if (data?.success) {

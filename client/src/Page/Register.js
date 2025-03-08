@@ -17,7 +17,7 @@ const Register = () => {
     async function handle(e) {
         e.preventDefault();
         try {
-            const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/register`, { name, email, phone, address, password,secret });
+            const res = await axios.post(`http://localhost:8000/api/v1/register`, { name, email, phone, address, password,secret });
             if (res.data.success) {
                 toast.success(res.data.message);
                 console.log(res.data.success);

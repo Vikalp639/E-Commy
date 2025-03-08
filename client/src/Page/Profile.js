@@ -17,7 +17,7 @@ const  Profile=()=> {
         e.preventDefault();
         try {
             
-            const res = await axios.put(`${process.env.REACT_APP_API}/api/v1/update`, {i, name, email, phone, address,password,secret });
+            const res = await axios.put(`http://localhost:8000/api/v1/update`, {i, name, email, phone, address,password,secret });
             if (res?.data?.success) {
             
                 console.log(res.data.success);

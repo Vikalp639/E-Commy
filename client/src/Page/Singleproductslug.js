@@ -13,7 +13,7 @@ const Singleproductslug = () => {
   const singlep = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_API}/api/v1/getsingleproduct/${params.slug}`
+        `http://localhost:8000/api/v1/getsingleproduct/${params.slug}`
       );
       if (data?.product) {
        
@@ -26,7 +26,7 @@ const Singleproductslug = () => {
   const relatedpr=async()=>{
     try {
       if(product._id){
-        const {data}=await axios.get(`${process.env.REACT_APP_API}/api/v1/getrelatedproducts/${product?._id}/${product?.category?._id}`);
+        const {data}=await axios.get(`http://localhost:8000/api/v1/getrelatedproducts/${product?._id}/${product?.category?._id}`);
         data.related=data.related.filter(c=>c.name!==product.name)
         
         setrelatedp(data.related);
@@ -53,7 +53,7 @@ const Singleproductslug = () => {
           <div className="border-[0px]  ml-[55px] mt-[10px] hah " onClick={() => {}}>
             {product?._id?(<img
               className="w-[363px] h-[360px] rounded-[5%] border-[0px] mt-[10px]  bg-[white] "
-              src={`${process.env.REACT_APP_API}/api/v1/getphoto/${product?._id}`}
+              src={`http://localhost:8000/api/v1/getphoto/${product?._id}`}
               alt="photoff"
             ></img>):(<div> </div>)}
             
@@ -98,7 +98,7 @@ const Singleproductslug = () => {
              
               
             }} >
-<img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px] ' src={`${process.env.REACT_APP_API}/api/v1/getphoto/${p._id}`} alt='photoff'></img>
+<img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px] ' src={`http://localhost:8000/api/v1/getphoto/${p._id}`} alt='photoff'></img>
 <div className='text-[20px]' >{p.name} </div>
                   <div>{p.description}</div>
                   <div className='mt-[8px]'>${p.price}</div>

@@ -8,7 +8,7 @@
 //     const [auth,setAuth]=useAuth();
 //     useEffect(()=>{
 //         const authcheck=async()=>{
-//             const r=await axios.get(`${process.env.REACT_APP_API}/api/v1/test`,{headers:{'Authorization':auth?.token}});
+//             const r=await axios.get(`http://localhost:8000/api/v1/test`,{headers:{'Authorization':auth?.token}});
 //             if(r.data.ok){
 //                 setOk(true);
 //             }
@@ -36,7 +36,7 @@ const PrivateRoute=()=> {
     const [auth]=useAuth();
     useEffect(()=>{
         const authcheck=async()=>{
-            const r=await axios.get(`${process.env.REACT_APP_API}/api/v1/test`,{headers:{'Authorization':auth?.token}});
+            const r=await axios.get(`http://localhost:8000/api/v1/test`,{headers:{'Authorization':auth?.token}});
             if(r.data.ok){
                 setOk(true);
             }

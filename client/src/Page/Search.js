@@ -23,7 +23,7 @@ const Search=()=>{
   
    
  }} >
-<img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`${process.env.REACT_APP_API}/api/v1/getphoto/${p._id}`} alt='photoff'></img>
+<img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`http://localhost:8000/api/v1/getphoto/${p._id}`} alt='photoff'></img>
 <div className='text-[20px]' >{p.name} </div>
        <div>{p.description}</div>
        <div className='mt-[8px]'>${p.price}</div>
