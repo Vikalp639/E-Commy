@@ -187,10 +187,7 @@ const getproducts=async()=>{
                    <div className='flex gap-[25px] flex-wrap w-[1200px]   overflow-y-hidden mt-[20px] p-[20px]'>
                    {
                    products.map((p)=>(
-<div className='border-[2px]  p-[18px]  bg-[white] hah  hover:scale-[1.1] ml-[20px] mt[20px] ' key={p._id} onClick={()=>{
-                  
-                   
-                 }} >
+<div  key={p._id} >
 <img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`https://e-commy-1.onrender.com//api/v1/getphoto/${p._id}`} alt='photoff'onClick={()=>{
                         navi(`/singleproduct/${p.slug}`);
                        }}></img>
