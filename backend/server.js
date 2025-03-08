@@ -8,12 +8,12 @@ import dotenv from 'dotenv';
 import connectdb from './config/dbconfig.js';
 import path from 'path';
 dotenv.config();
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "/client/dist")));
-app.get("*", (req, res) =>{
-    res.sendFile
-    (path.resolve(__dirname, "client", "dist", "index.html"));
-});
+// const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, "/client/dist")));
+// app.get("*", (req, res) =>{
+//     res.sendFile
+//     (path.resolve(__dirname, "client", "dist", "index.html"));
+// });
 app.use(express.json());
 app.use(cors());
 // app.get('http://localhost:3000/api/v1/make', (req, res) => {
