@@ -6,14 +6,20 @@ import productroutes from './routes/productroutes.js'
 import categoryroutes from './routes/categoryroutes.js'
 import dotenv from 'dotenv';
 import connectdb from './config/dbconfig.js';
-
+import path from 'path';
 dotenv.config();
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/client/dist")));
+app.get("*", (req, res) =>{
+    res.sendFile
+    (path.resolve(__dirname, "client", "dist", "index.html"));
+});
 app.use(express.json());
 app.use(cors());
 // app.get('http://localhost:3000/api/v1/make', (req, res) => {
 //     res.send('OK');
 //   });
-const PORT=process.env.PORT;
+const PORT=process.env.PORT||4000;
 
 
 app.listen(PORT,()=>{
