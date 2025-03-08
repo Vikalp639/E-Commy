@@ -35,7 +35,7 @@ export const Cart=()=>{
   async function pay(){
     try {
         if(auth?.user?._id){
-            const {data}=await axios.post(`http://localhost:8000/api/v1/make`,{
+            const {data}=await axios.post(`https://e-commy-1.onrender.com//api/v1/make`,{
                 arr,aa
             })
             if(data.success){
@@ -74,7 +74,7 @@ export const Cart=()=>{
                            
                             
                           }} >
-            <img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`http://localhost:8000/api/v1/getphoto/${p._id}`} alt='photoff'></img>
+            <img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`https://e-commy-1.onrender.com//api/v1/getphoto/${p._id}`} alt='photoff'></img>
             
             <div>
             <div className='text-[20px]' >{p.name} </div>

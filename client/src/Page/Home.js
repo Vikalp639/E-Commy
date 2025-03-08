@@ -57,7 +57,7 @@ const Home = () => {
       setChecked(prev=>value?[...prev,id]:prev.filter(c=>c!==id));
     }
 const getproducts=async()=>{
-    const {data}=await axios.get(`http://localhost:8000/api/v1/getproducts`);
+    const {data}=await axios.get(`https://e-commy-1.onrender.com//api/v1/getproducts`);
      setProducts(data.products);
    
   }
@@ -76,7 +76,7 @@ const getproducts=async()=>{
        (async () => {
         try {
           
-          const { data } = await axios.post(`http://localhost:8000/api/v1/filterproducts`, {
+          const { data } = await axios.post(`https://e-commy-1.onrender.com//api/v1/filterproducts`, {
             checked,
             radio,
           });
@@ -89,7 +89,7 @@ const getproducts=async()=>{
   }, [checked, radio]);
   // const getcategory=async()=>{
   //   try{
-  //     const aa=await axios.get(`http://localhost:8000/api/v1/getcategory`);
+  //     const aa=await axios.get(`https://e-commy-1.onrender.com//api/v1/getcategory`);
   //     setCategories(aa.data.category);
   //   }
   //  catch(e){
@@ -100,7 +100,7 @@ const getproducts=async()=>{
   useEffect(()=>{
    (async()=>{
     try{
-      const aa=await axios.get(`http://localhost:8000/api/v1/getcategory`);
+      const aa=await axios.get(`https://e-commy-1.onrender.com//api/v1/getcategory`);
       setCategories(aa.data.category);
     }
    catch(e){
@@ -112,7 +112,7 @@ const getproducts=async()=>{
   // const filterProduct = async () => {
   //   try {
       
-  //     const { data } = await axios.post(`http://localhost:8000/api/v1/filterproducts`, {
+  //     const { data } = await axios.post(`https://e-commy-1.onrender.com//api/v1/filterproducts`, {
   //       checked,
   //       radio,
   //     });
@@ -191,7 +191,7 @@ const getproducts=async()=>{
                   
                    
                  }} >
-<img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`http://localhost:8000/api/v1/getphoto/${p._id}`} alt='photoff'onClick={()=>{
+<img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`https://e-commy-1.onrender.com//api/v1/getphoto/${p._id}`} alt='photoff'onClick={()=>{
                         navi(`/singleproduct/${p.slug}`);
                        }}></img>
 <div className='flex justify-between' onClick={()=>{

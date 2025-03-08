@@ -18,7 +18,7 @@ const Forgot = () => {
     async function handle(e) {
         e.preventDefault();
         try {
-            const res = await axios.post(`http://localhost:8000/api/v1/forgot`, { email,secret,newpassword });
+            const res = await axios.post(`https://e-commy-1.onrender.com//api/v1/forgot`, { email,secret,newpassword });
             if (res.data.success) {
                 toast.success(res.data.message);
                 console.log(res.data.success);

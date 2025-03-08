@@ -11,7 +11,7 @@ const  AdminOrders=()=> {
 //  let order=[];
 // const getpro=async()=>{
 //   try {
-//     const {data}=await axios.get(`http://localhost:8000/api/v1/getproductbyid`);
+//     const {data}=await axios.get(`https://e-commy-1.onrender.com//api/v1/getproductbyid`);
 //     if(data.success){
 //        console.log(data.d);
 //     //    order=[data];
@@ -30,7 +30,7 @@ const st=['Not Process','Processing','Shipped','delievered','cancel']
 const buyerid=auth?.user?._id;
   const getOrders=async()=>{
     try {
-        const {data}=await axios.get(`http://localhost:8000/api/v1/adminorder`,{buyerid});
+        const {data}=await axios.get(`https://e-commy-1.onrender.com//api/v1/adminorder`,{buyerid});
         if(data.success){
            console.log(data.d);
         //    order=[data];
@@ -53,7 +53,7 @@ const buyerid=auth?.user?._id;
   // const fe=async()=>{
   //   try {
   //    products?.map(async(p)=>{
-  //     const {data}=await axios.post(`http://localhost:8000/api/v1/getproductbyid`,{p});
+  //     const {data}=await axios.post(`https://e-commy-1.onrender.com//api/v1/getproductbyid`,{p});
   //     rr.push(data.product);
   //     console.log(data.product)
   //   })
@@ -70,7 +70,7 @@ const buyerid=auth?.user?._id;
   //   const fe = async () => {
   //     try {
   //       const responses = await Promise.all(
-  //         products?.map(async(id) => axios.post(`http://localhost:8000/api/v1/getproductbyid`,{id}))
+  //         products?.map(async(id) => axios.post(`https://e-commy-1.onrender.com//api/v1/getproductbyid`,{id}))
   //       );
   //       setData(responses.map((res) => res.data.product));
   //     } catch (error) {
@@ -93,7 +93,7 @@ getOrders();
 //   const [stat,setstat]=useState(or?.status)
   const handlestatus=async(stat,id)=>{
     try {
-        const {data}=await axios.put(`http://localhost:8000/api/v1/updateorder`,{id,stat})
+        const {data}=await axios.put(`https://e-commy-1.onrender.com//api/v1/updateorder`,{id,stat})
         if(data.success){
             console.log(data);
         }
@@ -156,7 +156,7 @@ products?.length>0?(<div className="w-[100vw]  " >
                                           
                                        
                                            <div className='' >name:{p.name} </div>
-                          <img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`http://localhost:8000/api/v1/getphoto/${p._id}`} alt='photoff'></img>
+                          <img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`https://e-commy-1.onrender.com//api/v1/getphoto/${p._id}`} alt='photoff'></img>
                           
                                                 <div>{p.description}</div>
                                                 <div className='mt-[8px]'>${p.price}</div>
