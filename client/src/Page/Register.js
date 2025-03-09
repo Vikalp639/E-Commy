@@ -17,7 +17,7 @@ const Register = () => {
     async function handle(e) {
         e.preventDefault();
         try {
-            const res = await axios.post(`https://e-commy-1.onrender.com/api/v1/register`, { name, email, phone, address, password,secret });
+            const res = await axios.post(`/api/v1/register`, { name, email, phone, address, password,secret });
             if (res.data.success) {
                 toast.success(res.data.message);
                 console.log(res.data.success);

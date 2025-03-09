@@ -18,7 +18,7 @@ const Login = () => {
     async function handle(e) {
         e.preventDefault();
         try {
-            const res = await axios.post(`https://e-commy-1.onrender.com/api/v1/login`, { email,password });
+            const res = await axios.post(`/api/v1/login`, { email,password });
             if (res.data.success) {
                 toast.success(res.data.message);
                 console.log(res.data.success);

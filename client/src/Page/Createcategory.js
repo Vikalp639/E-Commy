@@ -9,7 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 const  Createcategory=()=> {
     const [categories,Setcategories]=useState([]);
   const getcategory=async()=>{
-    const aa=await axios.get(`https://e-commy-1.onrender.com/api/v1/getcategory`);
+    const aa=await axios.get(`/api/v1/getcategory`);
      Setcategories(aa.data.category);
    
   }
@@ -23,7 +23,7 @@ const  Createcategory=()=> {
   async function hanler(e) {
     e.preventDefault();
     try{
-        const re=await axios.post(`https://e-commy-1.onrender.com/api/v1/createcategory`,{name});
+        const re=await axios.post(`/api/v1/createcategory`,{name});
         if(re?.data?.success){
        getcategory();
        toast.success('category is created');
@@ -75,7 +75,7 @@ const  Createcategory=()=> {
                setupdatedname(c.name)
              }}>Edit</button>
              <button className="bg-red-600 absolute left-[520px] w-[60px] " onClick={async()=>{
-                await axios.delete(`https://e-commy-1.onrender.com/api/v1/deletecategory/${c._id}`);
+                await axios.delete(`/api/v1/deletecategory/${c._id}`);
                 getcategory();
              }}>Delete</button>
             </div>
@@ -102,7 +102,7 @@ const  Createcategory=()=> {
                 <form onSubmit={async(e)=>{
                     e.preventDefault();
                    
-                    try{ const {data}=await axios.put(`https://e-commy-1.onrender.com/api/v1/updatecategory/${c1._id}`,{name:updatedname});
+                    try{ const {data}=await axios.put(`/api/v1/updatecategory/${c1._id}`,{name:updatedname});
                     if(data?.success){
                        
                         getcategory();

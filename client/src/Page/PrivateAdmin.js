@@ -8,7 +8,7 @@ const PrivateAdmin=()=> {
     const [auth,setAuth]=useAuth();
     useEffect(()=>{
         const authcheck=async()=>{
-            const r=await axios.get(`https://e-commy-1.onrender.com/api/v1/admin`,{headers:{'Authorization':auth?.token}});
+            const r=await axios.get(`/api/v1/admin`,{headers:{'Authorization':auth?.token}});
             if(r.data.ok){
                 setOk(true);
             }
