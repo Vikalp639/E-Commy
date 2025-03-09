@@ -8,11 +8,11 @@ import dotenv from 'dotenv';
 import connectdb from './config/dbconfig.js';
 import path from 'path';
 dotenv.config();
-// const __dirname = path.resolve();
-// app.use(express.static(path.join(__dirname, "/client/build")));
-// app.get("*", (req, res) =>{
-//     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-// });
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/client/build")));
+app.get("*", (req, res) =>{
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 app.use(express.json());
 app.use(cors());
 // const corsOptions = {
