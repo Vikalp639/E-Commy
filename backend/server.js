@@ -15,6 +15,12 @@ app.get("*", (req, res) =>{
 });
 app.use(express.json());
 app.use(cors());
+const corsOptions = {
+    origin: 'https://e-commy.onrender.com', // Replace with your frontend URL
+    optionsSuccessStatus: 200,
+  };
+  
+  app.use(cors(corsOptions));
 // app.get('http://https://e-commy-1.onrender.com/host:3000/api/v1/make', (req, res) => {
 //     res.send('OK');
 //   });
