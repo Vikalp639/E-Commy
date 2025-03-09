@@ -17,7 +17,7 @@ const  Profile=()=> {
         e.preventDefault();
         try {
             
-            const res = await axios.put(`https://e-commy-1.onrender.com//api/v1/update`, {i, name, email, phone, address,password,secret });
+            const res = await axios.put(`https://e-commy-1.onrender.com/api/v1/update`, {i, name, email, phone, address,password,secret });
             if (res?.data?.success) {
             
                 console.log(res.data.success);

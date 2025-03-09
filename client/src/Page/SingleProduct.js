@@ -17,7 +17,7 @@ const SingleProduct=()=>{
     const [categories,Setcategories]=useState([]);
     const [sel,setsel]=useState("");
     const getcategory=async()=>{
-      const aa=await axios.get(`https://e-commy-1.onrender.com//api/v1/getcategory`);
+      const aa=await axios.get(`https://e-commy-1.onrender.com/api/v1/getcategory`);
        Setcategories(aa.data.category);
      
     }
@@ -28,7 +28,7 @@ const SingleProduct=()=>{
         let ans=window.prompt('Are you sure you want to delete');
         if(!ans)
             return;
-        await axios.delete( `https://e-commy-1.onrender.com//api/v1/deleteproduct/${productid}`);
+        await axios.delete( `https://e-commy-1.onrender.com/api/v1/deleteproduct/${productid}`);
         navi('/admindashboard/products');
     }
      async function h (e) {
@@ -44,7 +44,7 @@ const SingleProduct=()=>{
        productData.append("category",sel);
       //  productData.append("shipping",shipping);
         const { data } = await axios.put(
-         `https://e-commy-1.onrender.com//api/v1/updateproduct/${productid}`,
+         `https://e-commy-1.onrender.com/api/v1/updateproduct/${productid}`,
           productData
         );
         if (data?.success) {
@@ -62,7 +62,7 @@ const SingleProduct=()=>{
     const upd=async()=>{
       try {
         if(productid){
-          const {data}=await axios.post(`https://e-commy-1.onrender.com//api/v1/getproductbyid`,{productid});
+          const {data}=await axios.post(`https://e-commy-1.onrender.com/api/v1/getproductbyid`,{productid});
         if(data?.success){
          
          setPrice(data.product.price);

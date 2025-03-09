@@ -15,7 +15,7 @@ app.get("*", (req, res) =>{
 });
 app.use(express.json());
 app.use(cors());
-// app.get('http://localhost:3000/api/v1/make', (req, res) => {
+// app.get('http://https://e-commy-1.onrender.com/host:3000/api/v1/make', (req, res) => {
 //     res.send('OK');
 //   });
 const PORT=process.env.PORT||4000;

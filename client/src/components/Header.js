@@ -67,7 +67,7 @@ function handlelogout(){
 const searc=async(e)=>{
 e.preventDefault();
 try {
-    const {data}=await axios.post(`https://e-commy-1.onrender.com//api/v1/search`,{keyword});
+    const {data}=await axios.post(`https://e-commy-1.onrender.com/api/v1/search`,{keyword});
     // console.log(data);
     setress(data);
     navigate('/search')
