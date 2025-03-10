@@ -104,8 +104,9 @@
         width:220px
       }
       .ho{
-        width:250px;
         position: relative;
+        width:250px;
+        
         left:30px
       }
       .ba{
