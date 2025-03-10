@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useCart } from '../context/cart';
- import banner from '../images/a.webp'
+ import banner from '../images/l.jpg'
 const Home = () => {
     // const [auth,setAuth]=useAuth();
     // const [productid,setproductid]=useProd();
@@ -125,12 +125,12 @@ const getproducts=async()=>{
     return (
         <div className=''> 
             <Layout>
-            <img
+            <img 
         src={banner}
-        className="banner-img mb-[50px]"
+        className="banner-img mt-[5px] mb-[50px]"
         alt="bannerimage"
         width={"100%"}
-      />
+      ></img>
       <div className='text-[30px] relative left-[740px]  ml-[20px] mt-[20px] text-[gray] text-[40px]'>All Products</div>
                 <div className='flex '>
                 <div className='   border-r-[2px]   mr-[40px] pl-[10px]'> 
@@ -185,11 +185,11 @@ const getproducts=async()=>{
 
                
                    
-                   <div className='flex gap-[25px] flex-wrap w-[1200px]   overflow-y-hidden mt-[20px] p-[20px]'>
+                   <div className='flex gap-[25px] flex-wrap w-[1200px] mj  overflow-y-hidden mt-[20px] p-[20px]'>
                    {
                    products?.map((p)=>(
 <div className='border-[2px]  p-[18px]  bg-[white] hah  hover:scale-[1.1] ml-[20px] mt[20px] ' key={p._id} >
-<img className='w-[200px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`/api/v1/getphoto/${p._id}`} alt='photoff'onClick={()=>{
+<img className='w-[250px] h-[160px] rounded-[5%] border-b-[2px] mb-[15px] ml-[15px]' src={`/api/v1/getphoto/${p._id}`} alt='photoff'onClick={()=>{
                         navi(`/singleproduct/${p.slug}`);
                        }}></img>
 <div className='flex justify-between' onClick={()=>{

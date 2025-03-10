@@ -14,6 +14,9 @@
     
 
 }
+.mj{
+    background-color: #eee3e3c6;
+}
 .apa{
     overflow-x: hidden;
     /* background-color: rgba(170, 147, 157, 0.568); */
@@ -106,7 +109,8 @@
         left:30px
       }
       .ba{
-        background-color:#077abd
+        background-color:#021926;
+        color:white;
       }
     /*
 .b{

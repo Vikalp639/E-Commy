@@ -87,7 +87,7 @@ try {
      <div >
         <div className=' leading-[75px]  overflow-y-hidden sticky  top-0  flex justify-between items-center z-[10] pt-[10px] ba'>
             <h2 className='ml-[22px] flex items-center'>
-                <FaCartShopping className='text-[20px] mr-[5px] text-[black]' />
+                <FaCartShopping className='text-[20px] mr-[5px] text-[white]' />
                 <p className='text-[20px] cursor-pointer' onClick={handleNavigation}>ECOMMERCE APP</p>
             </h2>
             <div  className='relative left-[20px]'>
@@ -96,7 +96,7 @@ try {
                     <input className='   border-[2px] border-[grey] search ' type='text' placeholder='search products' onChange={(e)=>{
                         setKeyword(e.target.value)
                     }}></input>
-                   <button className='bg-[#012aa7] bb relative right-[38px] w-[40px] p-[10px] border-[2px] border-[grey] ha'><IoIosSearch className='text-[white]'></IoIosSearch>
+                   <button className='ba bb relative right-[38px] w-[40px] p-[10px] border-[2px] border-[grey] ha'><IoIosSearch className='text-[white]'></IoIosSearch>
                    </button>
                  
                 </form>
